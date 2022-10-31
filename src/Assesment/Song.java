@@ -1,5 +1,7 @@
 package Assesment;
 
+import static Assesment.Assessment.newline;
+
 public class Song {
     //creating the different variables for the array list
     private String title;
@@ -11,7 +13,7 @@ public class Song {
         this.artist = artist;
         this.playCount = playCount;
 //Then printing the current list
-        System.out.println(title + " " + artist + " " + playCount);
+        System.out.println(title + ", " + artist + ", " + playCount + newline);
     }
 
 }

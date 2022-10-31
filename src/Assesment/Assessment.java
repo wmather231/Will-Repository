@@ -6,13 +6,15 @@ import java.util.ArrayList;
 public class Assessment {
     //Creating the Array List and the Song class
     private static final ArrayList<Song> songs = new ArrayList<Song>();
+
+    static String newline = System.lineSeparator();
     public static void main(String[] args)
     {
 
         boolean runProgramme = true;
 
-
-        while (runProgramme == true) {
+        //while loop allows the programme to return to the beninging
+        while (runProgramme) {
         //adding the initial songs to the programme
         Song song = new Song("The pretender", "Foo Fighters", 561068936);
         song = new Song("Me and Michael", "MGMT", 49622743);
@@ -22,9 +24,8 @@ public class Assessment {
 
 
         //Presenting the user with the options of the programme
-        String newline = System.lineSeparator();
         System.out.println("1. Add a song" + newline + "2. remove a song" + newline + "3. List the songs" + newline + "4. list the songs in the order of plays" + newline + "5. End the programme");
-        String options = InputReader.getString("Select the action you would like to do:");
+        String options = InputReader.getString(newline + "Select the action you would like to do: ");
         switch (options) {
             case "1":
                 addSong();
