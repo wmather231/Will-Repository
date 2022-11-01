@@ -7,7 +7,7 @@ public class Assessment {
     //Creating the Array List and the Song class
     private static final ArrayList<Song> songs = new ArrayList<Song>();
 
-    static String newline = System.lineSeparator();
+    static String newline = System.lineSeparator(); //allows for new lines in the same print statement
     public static void main(String[] args)
     {
 
@@ -54,7 +54,13 @@ public class Assessment {
         return title + " " + artist + " " + playCount;
 
     }
-    public static void removeSong() {
+    public static void removeSong() { //the function for removing songs
+        String title = InputReader.getString("Enter the song name: ");
+        String artist = InputReader.getString("Enter the artist of the song: ");
+        int playCount = InputReader.getInt("Enter the playCount of the song: ");
+        songs.remove(title);
+        songs.remove(artist);
+        songs.remove(playCount);
     }
     private static void listSongs() {
     }
