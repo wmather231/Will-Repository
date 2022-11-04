@@ -16,11 +16,11 @@ public class Assessment {
         //while loop allows the programme to return to the beninging
         while (runProgramme) {
         //adding the initial songs to the programme
-        Song song = new Song("The pretender", "Foo Fighters", 561068936);
-        song = new Song("Me and Michael", "MGMT", 49622743);
-        song = new Song("Chop Suey!", "System Of A Down", 893895854);
-        song = new Song("Simple Song", "The Shins", 106788827);
-        song = new Song("Fugazi", "Marillion", 206540);
+        Song song = new Song("The pretender", "Foo Fighters", 561068936, 1);
+        song = new Song("Me and Michael", "MGMT", 49622743, 2);
+        song = new Song("Chop Suey!", "System Of A Down", 893895854, 3);
+        song = new Song("Simple Song", "The Shins", 106788827, 4);
+        song = new Song("Fugazi", "Marillion", 206540, 5);
 
 
         //Presenting the user with the options of the programme
@@ -49,18 +49,23 @@ public class Assessment {
         String title = InputReader.getString("Enter the song name: ");
         String artist = InputReader.getString("Enter the artist of the song: ");
         int playCount = InputReader.getInt("Enter the playCount of the song: ");
+        int id = InputReader.getInt("Which number is it: ");
 
-        Song song = new Song(title, artist ,playCount);
+        Song song = new Song(title, artist ,playCount, id);
         return title + " " + artist + " " + playCount;
 
     }
     public static void removeSong() { //the function for removing songs
-        String title = InputReader.getString("Enter the song name: ");
+        /*String title = InputReader.getString("Enter the song name: ");
         String artist = InputReader.getString("Enter the artist of the song: ");
         int playCount = InputReader.getInt("Enter the playCount of the song: ");
         songs.remove(title);
         songs.remove(artist);
-        songs.remove(playCount);
+        songs.remove(playCount);*/
+
+        int selection = InputReader.getInt("What number song would you like to remove");
+        songs.remove(selection - 1);
+
     }
     private static void listSongs() {
     }
