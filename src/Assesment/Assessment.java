@@ -23,7 +23,7 @@ public class Assessment
 
         while (runProgramme)
         {
-            System.out.println("1. Add a song\n" + "2. remove a song\n" + "3. List the songs\n" + "4. list the songs in the order of plays\n" + "5. End the programme\n");
+            System.out.println("1. Add a song\n" + "2. remove a song\n" + "3. List the songs\n" + "4. list the songs above a certain amount of plays\n" + "5. End the programme\n");
             int options = InputReader.getInt("\nSelect the action you would like to do: ");
             switch (options)
             {
