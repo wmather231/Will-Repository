@@ -1,25 +1,45 @@
 package Assesment;
 
-import static Assesment.Assessment.newline;
+import java.util.ArrayList;
 
-public class Song {
-    //creating the different variables for the array list
+
+
+
+/**
+ * This class is used to store information about a single song
+ * each time a new song is created it is given a new ID which is a simple number
+ * playCount will be used to count the number of times a song has been streamed
+ * @author William
+ */
+public class Song
+{
+
     private static int numberOfSongs = 0;
     private int id;
     private String title;
     private String artist;
     private int playCount;
 
-    public Song(String title, String artist, int playCount) { //Allowing the array list to add the title, artist, and play count to the list
+    /**
+     * This method created a new song and initialise all the attributes
+     * including the generation of a new unique ID
+     */
+    public Song(String title, String artist, int playCount)
+    {
         numberOfSongs++;
         this.id = numberOfSongs;
+
         this.title = title;
         this.artist = artist;
         this.playCount = playCount;
-//Then printing the current list
+    }
+    public String toString()
+    {
+        return id + " " + title + ", " + artist + ", " + playCount + "\n";
+    }
 
-        System.out.println(id + " " + title + ", " + artist + ", " + playCount + newline);
-
+    public int getPlayCount() {
+        return playCount;
     }
 
 }
